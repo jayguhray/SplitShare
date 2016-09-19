@@ -14,6 +14,7 @@
 		AADE77F71D8F4D0F00E89E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F51D8F4D0F00E89E73 /* LaunchScreen.storyboard */; };
 		AADE78021D8F4D0F00E89E73 /* SplitShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE78011D8F4D0F00E89E73 /* SplitShareTests.swift */; };
 		AADE780D1D8F4D0F00E89E73 /* SplitShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE780C1D8F4D0F00E89E73 /* SplitShareUITests.swift */; };
+		AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE781A1D8F771D00E89E73 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AADE78081D8F4D0F00E89E73 /* SplitShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADE780C1D8F4D0F00E89E73 /* SplitShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitShareUITests.swift; sourceTree = "<group>"; };
 		AADE780E1D8F4D0F00E89E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADE781A1D8F771D00E89E73 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */,
 				AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */,
 				AADE77F01D8F4D0F00E89E73 /* Main.storyboard */,
+				AADE781A1D8F771D00E89E73 /* LoginViewController.swift */,
 				AADE77F31D8F4D0F00E89E73 /* Assets.xcassets */,
 				AADE77F51D8F4D0F00E89E73 /* LaunchScreen.storyboard */,
 				AADE77F81D8F4D0F00E89E73 /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */,
 				AADE77EF1D8F4D0F00E89E73 /* ViewController.swift in Sources */,
 				AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */,
 			);
