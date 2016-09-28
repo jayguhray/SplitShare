@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA26AADA1D99A0FD00B148DC /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */; };
 		AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */; };
 		AADE77EF1D8F4D0F00E89E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */; };
 		AADE77F21D8F4D0F00E89E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F01D8F4D0F00E89E73 /* Main.storyboard */; };
@@ -15,6 +16,12 @@
 		AADE78021D8F4D0F00E89E73 /* SplitShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE78011D8F4D0F00E89E73 /* SplitShareTests.swift */; };
 		AADE780D1D8F4D0F00E89E73 /* SplitShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE780C1D8F4D0F00E89E73 /* SplitShareUITests.swift */; };
 		AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE781A1D8F771D00E89E73 /* LoginViewController.swift */; };
+		AADE781D1D9197FE00E89E73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE781C1D9197FE00E89E73 /* HomeViewController.swift */; };
+		AADE781F1D91AA9300E89E73 /* BillSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */; };
+		AAEDE67B1D9468F600A50E4C /* HistoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDE67A1D9468F600A50E4C /* HistoryCellTableViewCell.swift */; };
+		AAF5A48D1D91DCC9006B1021 /* BSRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */; };
+		AAF5A48F1D91E1AA006B1021 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A48E1D91E1AA006B1021 /* Common.swift */; };
+		AAF5A4911D91E33E006B1021 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		AADE77E91D8F4D0F00E89E73 /* SplitShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,12 @@
 		AADE780C1D8F4D0F00E89E73 /* SplitShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitShareUITests.swift; sourceTree = "<group>"; };
 		AADE780E1D8F4D0F00E89E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AADE781A1D8F771D00E89E73 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AADE781C1D9197FE00E89E73 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillSplitViewController.swift; sourceTree = "<group>"; };
+		AAEDE67A1D9468F600A50E4C /* HistoryCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCellTableViewCell.swift; path = ../HistoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSRequestViewController.swift; sourceTree = "<group>"; };
+		AAF5A48E1D91E1AA006B1021 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +113,16 @@
 		AADE77EB1D8F4D0F00E89E73 /* SplitShare */ = {
 			isa = PBXGroup;
 			children = (
+				AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */,
+				AAEDE67A1D9468F600A50E4C /* HistoryCellTableViewCell.swift */,
+				AAF5A48E1D91E1AA006B1021 /* Common.swift */,
+				AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */,
 				AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */,
 				AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */,
 				AADE77F01D8F4D0F00E89E73 /* Main.storyboard */,
+				AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */,
+				AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */,
+				AADE781C1D9197FE00E89E73 /* HomeViewController.swift */,
 				AADE781A1D8F771D00E89E73 /* LoginViewController.swift */,
 				AADE77F31D8F4D0F00E89E73 /* Assets.xcassets */,
 				AADE77F51D8F4D0F00E89E73 /* LaunchScreen.storyboard */,
@@ -259,9 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA26AADA1D99A0FD00B148DC /* PeopleTableViewCell.swift in Sources */,
+				AAEDE67B1D9468F600A50E4C /* HistoryCellTableViewCell.swift in Sources */,
+				AADE781F1D91AA9300E89E73 /* BillSplitViewController.swift in Sources */,
 				AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */,
 				AADE77EF1D8F4D0F00E89E73 /* ViewController.swift in Sources */,
+				AAF5A48D1D91DCC9006B1021 /* BSRequestViewController.swift in Sources */,
 				AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */,
+				AADE781D1D9197FE00E89E73 /* HomeViewController.swift in Sources */,
+				AAF5A48F1D91E1AA006B1021 /* Common.swift in Sources */,
+				AAF5A4911D91E33E006B1021 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +514,7 @@
 				AADE78131D8F4D0F00E89E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AADE78141D8F4D0F00E89E73 /* Build configuration list for PBXNativeTarget "SplitShareTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +523,7 @@
 				AADE78161D8F4D0F00E89E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AADE78171D8F4D0F00E89E73 /* Build configuration list for PBXNativeTarget "SplitShareUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +532,7 @@
 				AADE78191D8F4D0F00E89E73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

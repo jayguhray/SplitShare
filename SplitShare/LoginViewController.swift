@@ -8,11 +8,43 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIScrollViewDelegate {
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
+    @IBAction func didPressLogin(sender: UIButton) {
+        loginIndicator.startAnimating()
+        
+        if emailField.text == "jay@email.com" && passField.text == "password"{
+            delay(2){
+            self.loginIndicator.stopAnimating()
+            self.performSegueWithIdentifier("loginSegue", sender: self)
+            }
+        }
+        else if emailField.text!.isEmpty {
+            let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+            }
+            self.loginIndicator.stopAnimating()
+            alertController.addAction(cancelAction)
+            presentViewController(alertController, animated: true) {
+            }
+        }
+        else {
+            delay(2){
+                self.loginIndicator.stopAnimating()
+                let alertController = UIAlertController(title: "Sign in Failed", message: "Please enter the correct Email and Password", preferredStyle: .Alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
+                    // handle cancel response here. Doing nothing will dismiss the view.
+                }
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true) {
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
