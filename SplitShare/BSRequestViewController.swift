@@ -41,6 +41,8 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.peopleTableView.allowsMultipleSelection = true
+        
         peopleTableView.dataSource = self
         peopleTableView.delegate = self
 
@@ -58,6 +60,9 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         cell.nameLabel?.text = Names[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
 
     override func didReceiveMemoryWarning() {
