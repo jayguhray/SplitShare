@@ -49,6 +49,10 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "People"
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
     }

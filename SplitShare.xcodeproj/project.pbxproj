@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA26AADA1D99A0FD00B148DC /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */; };
 		AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */; };
-		AADE77EF1D8F4D0F00E89E73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */; };
 		AADE77F21D8F4D0F00E89E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F01D8F4D0F00E89E73 /* Main.storyboard */; };
 		AADE77F41D8F4D0F00E89E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F31D8F4D0F00E89E73 /* Assets.xcassets */; };
 		AADE77F71D8F4D0F00E89E73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F51D8F4D0F00E89E73 /* LaunchScreen.storyboard */; };
@@ -45,7 +44,6 @@
 		AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		AADE77E91D8F4D0F00E89E73 /* SplitShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AADE77F11D8F4D0F00E89E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AADE77F31D8F4D0F00E89E73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AADE77F61D8F4D0F00E89E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				AAF5A48E1D91E1AA006B1021 /* Common.swift */,
 				AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */,
 				AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */,
-				AADE77EE1D8F4D0F00E89E73 /* ViewController.swift */,
 				AADE77F01D8F4D0F00E89E73 /* Main.storyboard */,
 				AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */,
 				AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */,
@@ -284,7 +281,6 @@
 				AAEDE67B1D9468F600A50E4C /* HistoryCellTableViewCell.swift in Sources */,
 				AADE781F1D91AA9300E89E73 /* BillSplitViewController.swift in Sources */,
 				AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */,
-				AADE77EF1D8F4D0F00E89E73 /* ViewController.swift in Sources */,
 				AAF5A48D1D91DCC9006B1021 /* BSRequestViewController.swift in Sources */,
 				AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */,
 				AADE781D1D9197FE00E89E73 /* HomeViewController.swift in Sources */,
