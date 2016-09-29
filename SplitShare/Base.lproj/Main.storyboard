@@ -357,6 +357,11 @@
                         <color key="backgroundColor" red="0.039215686270000001" green="0.72941176470000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="9tG-cr-lz3"/>
+                    <connections>
+                        <outlet property="amountField" destination="S7i-tC-Hw5" id="mLy-dY-eAW"/>
+                        <outlet property="billNameField" destination="Bqr-LT-rkX" id="a8z-MC-lyE"/>
+                        <outlet property="dateField" destination="KVn-Lu-yM1" id="ljb-6Z-seX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjn-9r-tb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
