@@ -10,6 +10,11 @@ import UIKit
 
 class BSRequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var amount: String!
+    var name: String!
+    var date: String!
+    var selectedPerson: String!
+    
     @IBAction func onBackTap(sender: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }
@@ -40,6 +45,9 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(amount)
+        print(name)
+        print(date)
         
         self.peopleTableView.allowsMultipleSelection = true
         
@@ -67,8 +75,17 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedPerson = Names[indexPath.row]
     }
-
+    
+    @IBAction func didPressNext(sender: AnyObject) {
+        let newBill = Bills(name: name, amount: amount, date: date, payees: [selectedPerson], status: "Paid", split: 1)
+        
+        myObjects.append(newBill)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

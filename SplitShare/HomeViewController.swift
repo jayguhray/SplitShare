@@ -10,7 +10,7 @@ import UIKit
 
 struct Bills {
     let name: String!
-    let amount: CGFloat!
+    let amount: String!
     let date: String!
     let payees: [String]
     let status: String!
@@ -18,9 +18,9 @@ struct Bills {
 }
 
 var myObjects = [
-    Bills(name: "AT&T Family", amount: 180.00, date: "10/06/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Received", split: 45),
-    Bills(name: "Spotify Family", amount: 15, date: "10/14/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey", "Richard Kelly", "Timothy Lee"], status: "Paid", split: 2.50),
-    Bills(name: "Google Fiber", amount: 70, date: "10/04/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Recieved", split: 17.50)
+    Bills(name: "AT&T Family", amount: "180", date: "10/06/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Received", split: 45),
+    Bills(name: "Spotify Family", amount: "15", date: "10/14/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey", "Richard Kelly", "Timothy Lee"], status: "Paid", split: 2.50),
+    Bills(name: "Google Fiber", amount: "70", date: "10/04/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Recieved", split: 17.50)
 ]
 
 
@@ -42,7 +42,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        historyTableView.reloadData()
+    }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,9 +56,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = historyTableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryCellTableViewCell
         
         cell.billNameLabel?.text = myObjects[indexPath.row].name
-        //cell.costLabel.text = myObjects[indexPath.row].amount
+        cell.costLabel.text = String(myObjects[indexPath.row].amount)
         cell.statusLabel.text = myObjects[indexPath.row].status
-        //cell.splitLabel. = myObjects[indexPath.row].payees
+        cell.splitLabel.text = String("Split by \(myObjects[indexPath.row].payees.count) people")
         
         
         return cell
