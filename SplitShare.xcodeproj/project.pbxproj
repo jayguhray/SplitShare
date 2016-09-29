@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0E51F241D9DC890003A1041 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E51F231D9DC890003A1041 /* ConfirmViewController.swift */; };
 		AA26AADA1D99A0FD00B148DC /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */; };
 		AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */; };
 		AADE77F21D8F4D0F00E89E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADE77F01D8F4D0F00E89E73 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0E51F231D9DC890003A1041 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		AADE77E91D8F4D0F00E89E73 /* SplitShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */,
 				AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */,
 				AADE77F01D8F4D0F00E89E73 /* Main.storyboard */,
+				A0E51F231D9DC890003A1041 /* ConfirmViewController.swift */,
 				AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */,
 				AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */,
 				AADE781C1D9197FE00E89E73 /* HomeViewController.swift */,
@@ -282,6 +285,7 @@
 				AADE781F1D91AA9300E89E73 /* BillSplitViewController.swift in Sources */,
 				AADE781B1D8F771D00E89E73 /* LoginViewController.swift in Sources */,
 				AAF5A48D1D91DCC9006B1021 /* BSRequestViewController.swift in Sources */,
+				A0E51F241D9DC890003A1041 /* ConfirmViewController.swift in Sources */,
 				AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */,
 				AADE781D1D9197FE00E89E73 /* HomeViewController.swift in Sources */,
 				AAF5A48F1D91E1AA006B1021 /* Common.swift in Sources */,
@@ -382,6 +386,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -419,6 +424,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -431,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -442,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -453,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SplitShare.app/SplitShare";
 			};
 			name = Debug;
@@ -465,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShareTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SplitShare.app/SplitShare";
 			};
 			name = Release;
@@ -476,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SplitShare;
 			};
 			name = Debug;
@@ -487,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CapitalOne.SplitShareUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = SplitShare;
 			};
 			name = Release;

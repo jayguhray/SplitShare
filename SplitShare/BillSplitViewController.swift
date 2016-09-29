@@ -13,8 +13,7 @@ class BillSplitViewController: UIViewController {
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var billNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
-    
-    
+
     
     @IBAction func onBackTap(sender: UIButton) {
         self.dismissViewControllerAnimated(true) { 
@@ -43,7 +42,10 @@ class BillSplitViewController: UIViewController {
         
         let destinationViewController = segue.destinationViewController as! BSRequestViewController
 
-        //destinationViewController.
+        destinationViewController.amount = amountField.text
+        destinationViewController.name = billNameField.text
+        destinationViewController.date = dateField.text
+        destinationViewController.view.layoutIfNeeded()
         
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
