@@ -9,8 +9,14 @@
 import UIKit
 
 class BillSplitViewController: UIViewController {
+    
+    
+    
+    
     @IBAction func onBackTap(sender: UIButton) {
-        navigationController?.popViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true) { 
+        
+        }
     }
 
     override func viewDidLoad() {
@@ -30,6 +36,8 @@ class BillSplitViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

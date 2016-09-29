@@ -8,6 +8,23 @@
 
 import UIKit
 
+struct Bills {
+    let name: String!
+    let amount: CGFloat!
+    let date: String!
+    let payees: [String]
+    let status: String!
+    let split: CGFloat!
+}
+
+var myObjects = [
+    Bills(name: "AT&T Family", amount: 180.00, date: "10/06/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Received", split: 45),
+    Bills(name: "Spotify Family", amount: 15, date: "10/14/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey", "Richard Kelly", "Timothy Lee"], status: "Paid", split: 2.50),
+    Bills(name: "Google Fiber", amount: 70, date: "10/04/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Recieved", split: 17.50)
+]
+
+
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var historyTableView: UITableView!
@@ -29,17 +46,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return myObjects.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = historyTableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryCellTableViewCell
         
-        cell.billNameLabel?.text = billsValue[indexPath.row]
-        cell.costLabel.text = "$2.50"
-        cell.statusLabel.text = "Paid"
-        cell.splitLabel.text = "Split 6 ways"
+        cell.billNameLabel?.text = myObjects[indexPath.row].name
+        //cell.costLabel.text = myObjects[indexPath.row].amount
+        cell.statusLabel.text = myObjects[indexPath.row].status
+        //cell.splitLabel. = myObjects[indexPath.row].payees
         
         
         return cell
