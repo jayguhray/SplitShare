@@ -17,10 +17,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didPressLogin(sender: UIButton) {
         loginIndicator.startAnimating()
         
-        if emailField.text == "jay@email.com" && passField.text == "password"{
+        if emailField.text == "jay" && passField.text == "pass"{
             delay(2){
             self.loginIndicator.stopAnimating()
             self.performSegueWithIdentifier("loginSegue", sender: self)
+        
             }
         }
         else if emailField.text!.isEmpty {
