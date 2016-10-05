@@ -1,53 +1,50 @@
 //
-//  BSRequestViewController.swift
+//  MSRequestViewController.swift
 //  SplitShare
 //
-//  Created by Garay,Jerry on 9/20/16.
+//  Created by Garay,Jerry on 10/4/16.
 //  Copyright © 2016 Garay,Jerry. All rights reserved.
 //
 
 import UIKit
 
-class BSRequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    var amount: String!
-    var name: String!
-    var date: String!
-    var selectedPerson: String!
-    
+class MSRequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     @IBAction func onBackTap(sender: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }
     
+    @IBOutlet weak var splitwithLabel: UILabel!
+    
     @IBOutlet weak var peopleTableView: UITableView!
     
-    var Names = ["Jacquelin Jozwiak",
-    "Jinny Jefferis",
-    "Meda Mingo",
-    "Angelika Atkison",
-    "Wilbur Woolford",
-    "Wally Wagar",
-    "Soila Shrader",
-    "Jonnie Janssen",
-    "Carolynn Clendening",
-    "Robert Ruble",
-    "Aron Avelar",
-    "Avery Arzu",
-    "Maire Minor",
-    "Jerica Jernigan",
-    "Retta Radley",
-    "Dede Dalley",
-    "Dinorah Darrigo",
-    "Merideth Mckamey",
-    "Stephany Schilke",
-    "Augustus Arvie"]
+    var selectedPerson: String!
     
-
+    var Names = ["Jacquelin Jozwiak",
+                 "Jinny Jefferis",
+                 "Meda Mingo",
+                 "Angelika Atkison",
+                 "Wilbur Woolford",
+                 "Wally Wagar",
+                 "Soila Shrader",
+                 "Jonnie Janssen",
+                 "Carolynn Clendening",
+                 "Robert Ruble",
+                 "Aron Avelar",
+                 "Avery Arzu",
+                 "Maire Minor",
+                 "Jerica Jernigan",
+                 "Retta Radley",
+                 "Dede Dalley",
+                 "Dinorah Darrigo",
+                 "Merideth Mckamey",
+                 "Stephany Schilke",
+                 "Augustus Arvie"]
+    
+    var nameArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(amount)
-        print(name)
-        print(date)
         
         self.peopleTableView.allowsMultipleSelection = true
         
@@ -61,33 +58,31 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         return "People"
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Names.count
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = peopleTableView.dequeueReusableCellWithIdentifier("nameCell") as! PeopleTableViewCell
+        
+        let cell = peopleTableView.dequeueReusableCellWithIdentifier("nameCell") as! peopleMSTableViewCell
         
         cell.nameLabel?.text = Names[indexPath.row]
+        print("My Names go here")
+        print (Names[indexPath.row])
         
         return cell
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Names.count
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
         selectedPerson = Names[indexPath.row]
+        nameArray.append(selectedPerson)
+        splitwithLabel.text = "Split with " +  String(nameArray.count)
         
         
     }
-    
-    @IBAction func didPressNext(sender: AnyObject) {
-        let newBill = Bills(name: name, amount: amount, date: date, payees: [selectedPerson], status: "Paid", split: 1)
-        
-        myObjects.append(newBill)
-    }
-    
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -98,7 +93,7 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
