@@ -17,23 +17,17 @@ struct Bills {
     let split: CGFloat!
 }
 
-struct History {
-    let name: String!
-    let amount: String!
-    let date: String!
-    let status: String!
-    let split: CGFloat!
-}
-
 var myObjects = [
-    Bills(name: "AT&T Family", amount: "180.00", date: "10/06/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Receiving", split: 45),
-    Bills(name: "Spotify Family", amount: "15.00", date: "10/14/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey", "Richard Kelly", "Timothy Lee"], status: "Paying", split: 2.50),
-    Bills(name: "Google Fiber", amount: "70.00", date: "10/04/16", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Recieving", split: 17.50)
+    Bills(name: "Spotify Family", amount: "-2.50", date: "10/14", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey", "Richard Kelly", "Timothy Lee"], status: "Paying", split: 2.50),
+    Bills(name: "Google Fiber", amount: "70.00", date: "10/04", payees: ["Jerry Garay", "Adey Salyards", "Ravi Gangele", "Alex Hachey"], status: "Recieving", split: 17.50)
 ]
 
 var myHistoryObjects = [
-    History(name: "Pizza Party", amount: "-8.53", date: "10/3/16", status: "Paid", split: 6),
-    History(name: "Google Fiber", amount: "70.00", date: "9/04/16", status: "Recieved", split: 4),
+    Bills(name: "KBBQ Lunch", amount: "$-8.53", date: "10/3/16", payees: ["Person 1", "Person 4", "Person 3", "Person 4", "Person 5", "Person 6" ], status: "Paid", split: 6),
+    Bills(name: "Google Fiber", amount: "$70.00", date: "9/04/16", payees: ["Person 1", "Person 4", "Person 3", "Person 4"], status: "Recieved", split: 4),
+    Bills(name: "Spotify Family", amount: "$-2.50", date: "09/14/16", payees: ["Person 1", "Person 4", "Person 3", "Person 4", "Person 5", "Person 6" ], status: "Paid", split: 6),
+    Bills(name: "NY Trip Gas Money", amount: "$-17.35", date: "09/09/16", payees: ["Person 1", "Person 4", "Person 3", "4"], status: "Paid", split: 4)
+    
 ]
 
 
@@ -41,10 +35,6 @@ var myHistoryObjects = [
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var historyTableView: UITableView!
-    
-    var billsValue = ["Spotify Family", "AT&T", "Netflix", "FIOS", "Carpool"]
-    var statusValue = ["Paid", "Recieved", "Paid", "Paid", "Paid",]
-    var costValue = ["$15.00", "" ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,37 +47,47 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(animated: Bool) {
         historyTableView.reloadData()
+        print(myHistoryObjects)
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
-        /*if section == 0 {
-            return self.myObjects.count
+        if section == 0 {
+            return myObjects.count
         }
         
-        else if section == 1 {
-            return self.myHistoryObjects.count
-        }*/
+        else {
+            return myHistoryObjects.count
+        }
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = historyTableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryCellTableViewCell
-        let cell1 = historyTableView.dequeueReusableCellWithIdentifier("realHistory") as!
-            realhisTableViewCell
-        
+        if indexPath.section == 0 {
+            // set up myObjects
+            
+            let cell = historyTableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryCellTableViewCell
             cell.billNameLabel?.text = myObjects[indexPath.row].name
             cell.costLabel.text = String("$\(myObjects[indexPath.row].amount)")
+            cell.dateLabel.text = myObjects[indexPath.row].date
             cell.statusLabel.text = myObjects[indexPath.row].status
-            cell.splitLabel.text = String("Split by \(myObjects[indexPath.row].payees.count) people")
+            cell.splitLabel.text = String("Split with \(myObjects[indexPath.row].payees.count) people")
             
-
+            return cell
+        } else {
+            // set up myHistoryObjects
+            
+            let cell1 = historyTableView.dequeueReusableCellWithIdentifier("realHistory") as! realhisTableViewCell
             cell1.nameLabel?.text = myHistoryObjects[indexPath.row].name
-        
-        return cell
+            cell1.statusLabel.text = myHistoryObjects[indexPath.row].status
+            cell1.costLabel.text = myHistoryObjects[indexPath.row].amount
+            cell1.dateLabel.text = myHistoryObjects[indexPath.row].date
+            cell1.splitLabel.text = String("Split with \(myHistoryObjects[indexPath.row].payees.count) people")
+            
+            
+            return cell1
+        }
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -95,6 +95,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return "Ongoing"
         } else if section == 1{
             return "History"
+        }
+        else {
+            return "error"
         }
     }
     

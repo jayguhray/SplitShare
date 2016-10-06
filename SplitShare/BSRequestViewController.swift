@@ -15,6 +15,8 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     var date: String!
     var selectedPerson: String!
     
+    @IBOutlet weak var splitnumberLabel: UILabel!
+    @IBOutlet weak var splitwithlabel: UILabel!
     @IBAction func onBackTap(sender: UIButton) {
         navigationController?.popViewControllerAnimated(true)
     }
@@ -22,7 +24,7 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var peopleTableView: UITableView!
     
     var Names = ["Jacquelin Jozwiak",
-    "Jinny Jefferis",
+    "Jerry Garay",
     "Meda Mingo",
     "Angelika Atkison",
     "Wilbur Woolford",
@@ -41,6 +43,8 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     "Merideth Mckamey",
     "Stephany Schilke",
     "Augustus Arvie"]
+    
+    var nameArray = [String]()
     
 
     override func viewDidLoad() {
@@ -76,16 +80,21 @@ class BSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedPerson = Names[indexPath.row]
+        nameArray.append(selectedPerson)
         
+        //splitwithlabel.text = "Split with"
         
+        splitnumberLabel.text = String(nameArray.count)
+        
+        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.init(red: 206/255, green: 82/255, blue: 80/255, alpha: 1.0)
     }
     
     @IBAction func didPressNext(sender: AnyObject) {
-        let newBill = Bills(name: name, amount: amount, date: date, payees: [selectedPerson], status: "Paid", split: 1)
+        let newBill = Bills(name: name, amount: amount, date: date, payees: ["1","2","3","4"], status: "Recieving", split: 4)
         
         myObjects.append(newBill)
     }
-    
     
     
     override func didReceiveMemoryWarning() {

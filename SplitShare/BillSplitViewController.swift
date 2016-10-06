@@ -8,12 +8,15 @@
 
 import UIKit
 
-class BillSplitViewController: UIViewController {
+class BillSplitViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var amountField: UITextField!
     @IBOutlet weak var billNameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
 
+    @IBOutlet weak var nameParent: UIView!
+    @IBOutlet weak var amountParent: UIView!
+    @IBOutlet weak var dateParent: UIView!
     
     @IBAction func onBackTap(sender: UIButton) {
         self.dismissViewControllerAnimated(true) { 
@@ -21,13 +24,33 @@ class BillSplitViewController: UIViewController {
         }
     }
 
+    @IBOutlet weak var billScrollView: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //dateField.delegate = self
+        billNameField.becomeFirstResponder()
     
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        if textField == billNameField {
+            amountField.becomeFirstResponder()
+            //billScrollView.setContentOffset(CGPointMake(0, 60), animated: true)
+        }
+        else if textField == amountField {
+            dateField.becomeFirstResponder()
+            //billScrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        }
+        else if textField == dateField {
+            dateField.resignFirstResponder()
+        }
+        
+        return true
     }
     
     
@@ -37,7 +60,14 @@ class BillSplitViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    func textFieldDidBeginEditing(textField: UITextField) {
+//        }
+//    }
     
+    
+    @IBAction func onTapDismiss(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     
 
     

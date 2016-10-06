@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SplitShare/MealSplitViewController.swift"
-            timestampString = "497335642.921981"
+            filePath = "SplitShare/HomeViewController.swift"
+            timestampString = "497442631.023193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "textFieldShouldReturn(textField:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "tableView(tableView:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

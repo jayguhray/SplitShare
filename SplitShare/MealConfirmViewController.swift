@@ -1,18 +1,30 @@
 //
-//  ConfirmViewController.swift
+//  MealConfirmViewController.swift
 //  SplitShare
 //
-//  Created by Salyards, Adey on 9/29/16.
+//  Created by Garay,Jerry on 10/5/16.
 //  Copyright © 2016 Garay,Jerry. All rights reserved.
 //
 
 import UIKit
 
-class ConfirmViewController: UIViewController {
+class MealConfirmViewController: UIViewController {
+    
+    //var amount = String!
 
+    @IBAction func onSendRequest(sender: AnyObject) {
+        dismissViewControllerAnimated(true) {
+        }
+
+    }
+    
     @IBAction func onBackTap(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
+    
+    @IBOutlet weak var splitCostLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,11 +36,6 @@ class ConfirmViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func didPressDone(sender: AnyObject) {
-        dismissViewControllerAnimated(true) {
-            
-        }
-    }
 
     /*
     // MARK: - Navigation

@@ -14,13 +14,19 @@ class MSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         navigationController?.popViewControllerAnimated(true)
     }
     
+    var amount: String!
+    var name: String!
+    var total: String!
+    var selectedPerson: String!
+    
+    @IBOutlet weak var splitnumberLabel: UILabel!
     @IBOutlet weak var splitwithLabel: UILabel!
     
     @IBOutlet weak var peopleTableView: UITableView!
     
-    var selectedPerson: String!
+    var selectedPerson2: String!
     
-    var Names = ["Jacquelin Jozwiak",
+    var Names = ["Jerry Garay",
                  "Jinny Jefferis",
                  "Meda Mingo",
                  "Angelika Atkison",
@@ -50,6 +56,7 @@ class MSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         
         peopleTableView.dataSource = self
         peopleTableView.delegate = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -64,8 +71,6 @@ class MSRequestViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = peopleTableView.dequeueReusableCellWithIdentifier("nameCell") as! peopleMSTableViewCell
         
         cell.nameLabel?.text = Names[indexPath.row]
-        print("My Names go here")
-        print (Names[indexPath.row])
         
         return cell
     }
@@ -76,13 +81,21 @@ class MSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        selectedPerson = Names[indexPath.row]
-        nameArray.append(selectedPerson)
-        splitwithLabel.text = "Split with " +  String(nameArray.count)
-        
-        
+        selectedPerson2 = Names[indexPath.row]
+        nameArray.append(selectedPerson2)
+        //splitwithLabel.text = "Split with " +  String(nameArray.count)
+        splitnumberLabel.text = String(nameArray.count)
+        var selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        selectedCell.contentView.backgroundColor = UIColor.init(red: 206/255, green: 82/255, blue: 80/255, alpha: 1.0)
     }
 
+    @IBAction func didPressNext(sender: AnyObject) {
+        let newBill = Bills(name: name, amount: total, date: "10/06/16", payees: ["1","2","3","4","5","6"], status: "Paid", split: 6)
+        
+        myHistoryObjects.append(newBill)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,10 +106,24 @@ class MSRequestViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destinationViewController = segue.destinationViewController as! MealConfirmViewController
+        
+        destinationViewController.amount = 
+            
+            destinationViewController.view.layoutIfNeeded()
+    }
+    
+    //override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        
+
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
+ */
 }
+
+

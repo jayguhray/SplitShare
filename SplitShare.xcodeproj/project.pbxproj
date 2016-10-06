@@ -11,6 +11,7 @@
 		AA030F271DA43DB6005A31A0 /* MSRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA030F261DA43DB6005A31A0 /* MSRequestViewController.swift */; };
 		AA030F291DA46379005A31A0 /* peopleMSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA030F281DA46379005A31A0 /* peopleMSTableViewCell.swift */; };
 		AA030F2D1DA596B3005A31A0 /* realhisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA030F2C1DA596B3005A31A0 /* realhisTableViewCell.swift */; };
+		AA030F2F1DA5A651005A31A0 /* MealConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA030F2E1DA5A651005A31A0 /* MealConfirmViewController.swift */; };
 		AA26AADA1D99A0FD00B148DC /* PeopleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */; };
 		AA9B9B501DA2D1CE00610A4A /* MealSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B9B4F1DA2D1CE00610A4A /* MealSplitViewController.swift */; };
 		AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADE77EC1D8F4D0F00E89E73 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		AA030F261DA43DB6005A31A0 /* MSRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSRequestViewController.swift; sourceTree = "<group>"; };
 		AA030F281DA46379005A31A0 /* peopleMSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = peopleMSTableViewCell.swift; sourceTree = "<group>"; };
 		AA030F2C1DA596B3005A31A0 /* realhisTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realhisTableViewCell.swift; sourceTree = "<group>"; };
+		AA030F2E1DA5A651005A31A0 /* MealConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealConfirmViewController.swift; sourceTree = "<group>"; };
 		AA26AAD91D99A0FD00B148DC /* PeopleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewCell.swift; sourceTree = "<group>"; };
 		AA9B9B4F1DA2D1CE00610A4A /* MealSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealSplitViewController.swift; sourceTree = "<group>"; };
 		AADE77E91D8F4D0F00E89E73 /* SplitShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 		AA030F2A1DA55387005A31A0 /* Meal Split Flow */ = {
 			isa = PBXGroup;
 			children = (
+				AA030F2E1DA5A651005A31A0 /* MealConfirmViewController.swift */,
 				AA030F261DA43DB6005A31A0 /* MSRequestViewController.swift */,
 				AA9B9B4F1DA2D1CE00610A4A /* MealSplitViewController.swift */,
 			);
@@ -110,6 +113,7 @@
 		AA030F2B1DA55397005A31A0 /* Bill Split Flow */ = {
 			isa = PBXGroup;
 			children = (
+				A0E51F231D9DC890003A1041 /* ConfirmViewController.swift */,
 				AAF5A48C1D91DCC9006B1021 /* BSRequestViewController.swift */,
 				AADE781E1D91AA9300E89E73 /* BillSplitViewController.swift */,
 			);
@@ -148,7 +152,6 @@
 				AA030F2C1DA596B3005A31A0 /* realhisTableViewCell.swift */,
 				AA030F281DA46379005A31A0 /* peopleMSTableViewCell.swift */,
 				AA030F2A1DA55387005A31A0 /* Meal Split Flow */,
-				A0E51F231D9DC890003A1041 /* ConfirmViewController.swift */,
 				AAF5A4901D91E33E006B1021 /* SettingsViewController.swift */,
 				AADE781C1D9197FE00E89E73 /* HomeViewController.swift */,
 				AADE781A1D8F771D00E89E73 /* LoginViewController.swift */,
@@ -319,6 +322,7 @@
 				A0E51F241D9DC890003A1041 /* ConfirmViewController.swift in Sources */,
 				AA9B9B501DA2D1CE00610A4A /* MealSplitViewController.swift in Sources */,
 				AADE77ED1D8F4D0F00E89E73 /* AppDelegate.swift in Sources */,
+				AA030F2F1DA5A651005A31A0 /* MealConfirmViewController.swift in Sources */,
 				AADE781D1D9197FE00E89E73 /* HomeViewController.swift in Sources */,
 				AAF5A48F1D91E1AA006B1021 /* Common.swift in Sources */,
 				AAF5A4911D91E33E006B1021 /* SettingsViewController.swift in Sources */,

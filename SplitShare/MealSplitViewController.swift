@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealSplitViewController: UIViewController, UIScrollViewDelegate{
+class MealSplitViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate{
     
     @IBAction func onBackTap(sender: AnyObject) {
         self.dismissViewControllerAnimated(true){}
@@ -26,6 +26,7 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var totalCost: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     
+    
     @IBAction func calctip(sender: UISegmentedControl) {
         let tipPercentages = [0.18, 0.2, 0.22, 0]
         
@@ -33,7 +34,6 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
-        print(total)
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalCost.text = String(format: "$%.2f", total)
@@ -48,6 +48,8 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
         msScrollView.contentSize = msScrollView.frame.size
         msScrollView.delegate = self
         msScrollView.contentInset.bottom = 100
+        
+        mealName.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
@@ -69,14 +71,17 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
         // This method is called when the scrollview finally stops scrolling.
     }
     func keyboardWillShow(notification: NSNotification!) {
-        print("keyboardWillShow")
-        parentMeal.frame.origin.y = mealInitialY + mealOffset
-        msScrollView.contentOffset.y = msScrollView.contentInset.bottom
+//        parentMeal.frame.origin.y = mealInitialY + mealOffset
+//        msScrollView.contentOffset.y = msScrollView.contentInset.bottom
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == self.mealName {
-            self.billamount.becomeFirstResponder()
+        if textField == mealName {
+            billamount.becomeFirstResponder()
+            msScrollView.setContentOffset(CGPointMake(0, 100), animated: true)
+        }
+        else {
+            billamount.resignFirstResponder()
         }
         
         return true
@@ -87,6 +92,11 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
     
     func keyboardWillHide(notification: NSNotification!) {
         
+        
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
     }
     
     
@@ -96,15 +106,39 @@ class MealSplitViewController: UIViewController, UIScrollViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onTapDismiss(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destinationViewController = segue.destinationViewController as! MSRequestViewController
+        
+        destinationViewController.amount = billamount.text
+        destinationViewController.name = mealName.text
+        destinationViewController.total = totalCost.text
+        destinationViewController.view.layoutIfNeeded()
+    }
+    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("HEY HEY JAYGUUHHHRAY")
+        let destinationViewController = segue.destinationViewController as! MSRequestViewController
+
+        destinationViewController.amount = billamount.text
+        destinationViewController.name = mealName.text
+        destinationViewController.total.text = totalCost.text
+        
+        
+        destinationViewController.view.layoutIfNeeded()
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+    }*/
+    
 
 }

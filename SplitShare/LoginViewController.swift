@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UIScrollViewDelegate {
+class LoginViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passField: UITextField!
@@ -17,7 +17,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didPressLogin(sender: UIButton) {
         loginIndicator.startAnimating()
         
-        if emailField.text == "jay" && passField.text == "pass"{
+        if emailField.text == "jay@gmail.com" && passField.text == "pass"{
             delay(2){
             self.loginIndicator.stopAnimating()
             self.performSegueWithIdentifier("loginSegue", sender: self)
@@ -46,18 +46,32 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == emailField {
+            passField.becomeFirstResponder()
+        }
+        else {
+            passField.resignFirstResponder()
+        }
+        return true
+    }
 
     /*
     // MARK: - Navigation
